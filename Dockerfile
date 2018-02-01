@@ -1,8 +1,8 @@
 FROM eclipse-mosquitto
 
-COPY mosquitto.conf /mosquitto/config/mosquitto.conf
+COPY mosquitto.conf /mosquitto/config/
 
-COPY entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /
 ENTRYPOINT ["sh", "/entrypoint.sh"]
 
 EXPOSE 1883
