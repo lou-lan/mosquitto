@@ -2,7 +2,9 @@ FROM eclipse-mosquitto
 
 ADD mosquitto.conf /mosquitto/config/mosquitto.conf
 
-RUN touch /mosquitto/pass
-RUN mosquitto_passwd -b /mosquitto/pass mqtt $MQTT_PASS
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["sh", "/entrypoint.sh"]
 
 EXPOSE 1883
+
+CMD ["/usr/sbin/mosquitto","-c","/mosquitto/config/mosquitto.conf"]
