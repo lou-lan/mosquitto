@@ -1,6 +1,6 @@
 FROM eclipse-mosquitto
 
-ADD mosquitto.conf /mosquitto/config/mosquitto.conf
+COPY mosquitto.conf /mosquitto/config/mosquitto.conf
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["sh", "/entrypoint.sh"]
