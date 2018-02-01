@@ -3,7 +3,7 @@ FROM eclipse-mosquitto
 COPY mosquitto.conf /mosquitto/config/
 
 COPY entrypoint.sh /
-ENTRYPOINT ["sh", "/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 1883
 
