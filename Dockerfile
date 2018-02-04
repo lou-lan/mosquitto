@@ -4,7 +4,6 @@ ADD mosquitto.conf /mosquitto/config/
 ADD entrypoint.sh /
 RUN chmod -R 700 /entrypoint.sh
 
-
 ENTRYPOINT ["/entrypoint.sh"]
 EXPOSE 1883
 
